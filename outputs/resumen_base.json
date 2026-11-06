@@ -1,0 +1,160 @@
+{
+  "date": "2026-11-05",
+  "supervised": {
+    "fecha_revision": "2026-11-05",
+    "estado": "Revisión retrospectiva de EV2, alternativas evaluadas en validación",
+    "seleccion_historica": {
+      "regression": "SVM regresión (RBF)",
+      "classification": "Regresión logística",
+      "regression_config": "C=40; epsilon=3; gamma=scale",
+      "classification_config": "C=0.1; balanced",
+      "classification_threshold": 0.5,
+      "popular_threshold": 50,
+      "selection_data": "validation",
+      "train_songs": 16000,
+      "validation_songs": 17804,
+      "test_songs": 17804,
+      "random_state": 42,
+      "python": "3.14.7",
+      "sklearn": "1.9.1"
+    },
+    "regresion": {
+      "criterio_historico": "MAE de validación",
+      "mejor_MAE": "SVM regresión (RBF)",
+      "config_mejor_MAE": "C=40; epsilon=3; gamma=scale",
+      "MAE_validacion": 10.865877738777254,
+      "R2_validacion_seleccion": 0.40296058927996714,
+      "mejor_R2": "Random Forest regresión",
+      "config_mejor_R2": "180 trees; depth=None; leaf=2",
+      "R2_validacion_alternativa": 0.43865119772007266,
+      "MAE_validacion_alternativa": 11.095574822915074,
+      "aumento_MAE_alternativa_pct": 2.1139303207700926,
+      "pareto_ids": [
+        "R06",
+        "R08"
+      ],
+      "R2_RMSE_orden_equivalente": true
+    },
+    "clasificacion": {
+      "criterio_historico": "F1 de validación a umbral 0,5",
+      "mejor_F1": "Regresión logística",
+      "config_mejor_F1": "C=0.1; balanced",
+      "F1_validacion": 0.5975232198142415,
+      "ROC_AUC_validacion_seleccion": 0.8364701908402292,
+      "mejor_ROC_AUC_todas_configuraciones": "Random Forest clasificación",
+      "config_mejor_ROC_AUC": "180 trees; depth=None; leaf=1; balanced",
+      "ROC_AUC_validacion_alternativa": 0.8517165207011944,
+      "F1_validacion_alternativa": 0.4438439452795136,
+      "AP_validacion_alternativa": 0.6558410533880829,
+      "alternativa_evaluada_en_test": false,
+      "umbral_optimizado": false,
+      "nota": "Test solo se reutiliza para los representantes originales, el candidato por AUC se examina en validación."
+    },
+    "limitaciones": [
+      "Validación ya utilizada para selección",
+      "Test conocido desde EV2",
+      "16.000 canciones para ajuste supervisado",
+      "Artistas compartidos entre particiones",
+      "Scores sin calibración demostrada",
+      "Utilidad comercial fuera de lo medido"
+    ]
+  },
+  "clustering": {
+    "configurations_total": 161,
+    "dbscan_configurations": 150,
+    "kmeans_configurations": 11,
+    "kmeans_global_reference": {
+      "configuration": "Original10D_KMeans_k2",
+      "representation": "Original10D",
+      "algorithm": "K-Means",
+      "k": 2.0,
+      "eps": null,
+      "min_samples": null,
+      "eps_source": "none",
+      "eps_quantile": null,
+      "fit_seconds": 0.0449004000001878,
+      "inertia": 48509.855072862105,
+      "n_clusters": 2,
+      "coverage": 1.0,
+      "noise_pct": 0.0,
+      "n_assigned": 6000,
+      "n_silhouette": 2000,
+      "metric_clusters": 2,
+      "all_clusters_in_metric": true,
+      "silhouette": 0.22796998517686154,
+      "davies_bouldin": 1.738453363682157,
+      "calinski_harabasz": 1420.698725433385,
+      "min_cluster_pct_assigned": 26.266666666666666,
+      "max_cluster_pct_assigned": 73.73333333333333,
+      "eligible": true,
+      "rule_failures": "cumple"
+    },
+    "kmeans_editorial_detail": {
+      "configuration": "Original10D_KMeans_k7",
+      "representation": "Original10D",
+      "algorithm": "K-Means",
+      "k": 7.0,
+      "eps": null,
+      "min_samples": null,
+      "eps_source": "none",
+      "eps_quantile": null,
+      "fit_seconds": 0.1405107999999018,
+      "inertia": 31003.76751819093,
+      "n_clusters": 7,
+      "coverage": 1.0,
+      "noise_pct": 0.0,
+      "n_assigned": 6000,
+      "n_silhouette": 2000,
+      "metric_clusters": 7,
+      "all_clusters_in_metric": true,
+      "silhouette": 0.1654956953724334,
+      "davies_bouldin": 1.5228920407724547,
+      "calinski_harabasz": 934.1577389135798,
+      "min_cluster_pct_assigned": 1.2166666666666666,
+      "max_cluster_pct_assigned": 29.966666666666665,
+      "eligible": true,
+      "rule_failures": "cumple"
+    },
+    "detail_resampling_stability": {
+      "configuration": "Original10D_KMeans_k7",
+      "k": 7,
+      "experiment": "subsample_80pct",
+      "ARI_min": 0.9734992249303971,
+      "ARI_mediana": 0.983416795119604,
+      "ARI_max": 0.9922080413172208,
+      "silhouette_min": 0.16499202128999912,
+      "silhouette_max": 0.16590231550391144
+    },
+    "dbscan_eligible_per_representation": {
+      "Original10D": 0,
+      "PCA7": 0
+    },
+    "small_eps_min_samples_original": {
+      "configurations": 18,
+      "clusters_min": 1,
+      "clusters_max": 131,
+      "noise_min_pct": 46.03333333333333,
+      "noise_max_pct": 99.91666666666667
+    },
+    "elapsed_seconds": 107.26136670000051,
+    "interpretation": "Keep global geometric reference; offer the multigroup candidate only as an exploratory editorial granularity. Utility and fresh-sample validation pending."
+  },
+  "decisions": [
+    {
+      "tarea": "Regresión",
+      "decisión": "SVM regresión (RBF)",
+      "evidencia": "MAE val=10.866; RF R²=0.439"
+    },
+    {
+      "tarea": "Clasificación",
+      "decisión": "Regresión logística",
+      "evidencia": "F1 val=0.598; RF AUC=0.852"
+    },
+    {
+      "tarea": "Clustering",
+      "decisión": "k=2 referencia; k=7 detalle",
+      "evidencia": "Siluetas=0.228/0.165; DBSCAN elegibles=0"
+    }
+  ],
+  "retrospective": true
+}

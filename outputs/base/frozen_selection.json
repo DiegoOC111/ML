@@ -1,0 +1,15 @@
+{
+  "regression": "SVM regresión (RBF)",
+  "classification": "Regresión logística",
+  "regression_config": "C=40; epsilon=3; gamma=scale",
+  "classification_config": "C=0.1; balanced",
+  "classification_threshold": 0.5,
+  "popular_threshold": 50,
+  "selection_data": "validation",
+  "train_songs": 16000,
+  "validation_songs": 17804,
+  "test_songs": 17804,
+  "random_state": 42,
+  "python": "3.14.7",
+  "sklearn": "1.9.1"
+}

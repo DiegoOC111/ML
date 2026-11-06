@@ -1,0 +1,24 @@
+{
+  "p": 2,
+  "sample_songs": 32,
+  "partitions": 496,
+  "partitions_full_fit_train_per_model": 127992000,
+  "sample_source": "X_train_fit",
+  "seed": 48,
+  "positive_songs": 8,
+  "preprocessing_fitted_in_each_split": true,
+  "features": [
+    "danceability",
+    "energy",
+    "loudness",
+    "speechiness",
+    "acousticness",
+    "instrumentalness",
+    "liveness",
+    "valence",
+    "tempo",
+    "log_duration_min"
+  ],
+  "used_for_selection": false,
+  "aggregation": "31 out-of-fit predictions per song, averaged before scoring"
+}

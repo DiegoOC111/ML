@@ -1,0 +1,10 @@
+{
+  "seed": 20261106,
+  "songs": 8000,
+  "origin": "train disponible sin ajuste supervisado EP2",
+  "track_id_sha256": "3873b24267b5ee75bad07a1f338624f435d339bd21ac09d04df8ab5dce9abbde",
+  "selection_rule_reg": "menor MAE medio CV, desempate RMSE",
+  "selection_rule_cls": "mayor F1 medio CV a 0.5, desempate AP",
+  "ranking_k": 500,
+  "use": "comparación final de selecciones ya fijadas; mismo catálogo, no muestra externa"
+}

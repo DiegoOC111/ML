@@ -1,0 +1,54 @@
+{
+  "dimensions_90pct": 7,
+  "dimensions_95pct": 8,
+  "variance_2": 0.4416811851594654,
+  "variance_3": 0.570364682863556,
+  "variance_90": 0.9095026427590912,
+  "variance_95": 0.9535184674519479,
+  "protocol": {
+    "n_songs": 6000,
+    "n_metric_base": 2000,
+    "random_state": 42,
+    "pca_solver": "full",
+    "whiten": false,
+    "rescale_components": false,
+    "k": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "min_samples": [
+      11,
+      20
+    ],
+    "eps_quantiles": [
+      0.2,
+      0.4,
+      0.6,
+      0.75,
+      0.9
+    ]
+  },
+  "verification": {
+    "configurations": 102,
+    "representatives": 12,
+    "same_6000_track_ids_and_order": true,
+    "same_2000_metric_base": true,
+    "pca10_max_squared_distance_error": 2.8421709430404007e-13,
+    "pca10_max_reconstruction_error": 1.7014167852380524e-14,
+    "pca10_partition_ari": [
+      {
+        "algorithm": "K-Means",
+        "ari_all_6000_noise_as_label": 1.0
+      },
+      {
+        "algorithm": "DBSCAN",
+        "ari_all_6000_noise_as_label": 1.0
+      }
+    ]
+  }
+}

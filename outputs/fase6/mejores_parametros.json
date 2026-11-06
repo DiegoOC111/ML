@@ -1,0 +1,24 @@
+[
+  {
+    "modelo": "Clasificación · Grid logística",
+    "método": "GridSearchCV",
+    "combinaciones": 4,
+    "mejores_parámetros": {
+      "model__C": 10.0
+    },
+    "mejor_score_sklearn": 0.5836899795631804
+  },
+  {
+    "modelo": "Clasificación · Random RF",
+    "método": "RandomizedSearchCV",
+    "combinaciones": 6,
+    "mejores_parámetros": {
+      "model__n_estimators": 120,
+      "model__min_samples_leaf": 4,
+      "model__max_features": "sqrt",
+      "model__max_depth": 8,
+      "model__class_weight": "balanced_subsample"
+    },
+    "mejor_score_sklearn": 0.4923283219423846
+  }
+]

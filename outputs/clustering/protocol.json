@@ -1,0 +1,74 @@
+{
+  "songs": 6000,
+  "metric_base": 2000,
+  "seed": 42,
+  "features": [
+    "danceability",
+    "energy",
+    "loudness",
+    "speechiness",
+    "acousticness",
+    "instrumentalness",
+    "liveness",
+    "valence",
+    "tempo",
+    "log_duration"
+  ],
+  "representations": [
+    "Original10D",
+    "PCA7"
+  ],
+  "pca7_variance": 0.9095026427590912,
+  "k_values": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+  ],
+  "kmeans_n_init": 20,
+  "dbscan_min_samples": [
+    3,
+    5,
+    8,
+    11,
+    20
+  ],
+  "eps_absolute": [
+    0.3,
+    0.5,
+    0.75,
+    1.0,
+    1.25,
+    1.5
+  ],
+  "eps_quantiles": [
+    0.01,
+    0.025,
+    0.05,
+    0.1,
+    0.2,
+    0.4,
+    0.6,
+    0.75,
+    0.9
+  ],
+  "operational_rules": {
+    "groups": [
+      2,
+      12
+    ],
+    "coverage_min": 0.7,
+    "min_assigned_pct": 1.0,
+    "max_assigned_pct": 90.0
+  },
+  "selection_detail": "Best silhouette among eligible Original10D KMeans with k >= 3; editorial alternative, not global winner",
+  "stability": "5 initializations; 5 samples of 80%; scaling and PCA held fixed; KMeans ARI on omitted 20%",
+  "dbscan_subsample_stability": "ARI on shared assigned songs; report coverage Jaccard and degeneracy; no predict for DBSCAN"
+}

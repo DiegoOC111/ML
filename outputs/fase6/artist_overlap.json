@@ -1,0 +1,8 @@
+{
+  "artists_in_fit_train": 11033,
+  "artists_in_validation": 12057,
+  "shared_artist_names": 5419,
+  "validation_songs_with_seen_artist": 13461,
+  "validation_songs_with_seen_artist_pct": 75.60660525724556,
+  "identity_rule": "Normalized names separated by semicolon; not unique artist IDs"
+}

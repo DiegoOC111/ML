@@ -1,0 +1,72 @@
+{
+  "seed": 42,
+  "search_songs": 6000,
+  "n_folds": 3,
+  "final_fit_songs": 16000,
+  "cls_cv": "StratifiedKFold(3, shuffle=True)",
+  "threshold": 0.5,
+  "cls_metrics": [
+    "F1",
+    "ROC_AUC",
+    "AP",
+    "Precision",
+    "Recall"
+  ],
+  "search_fit_songs_per_fold": [
+    4000,
+    4000,
+    4000
+  ],
+  "search_eval_songs_per_fold": [
+    2000,
+    2000,
+    2000
+  ],
+  "search_space": {
+    "Clasificación · Grid logística": {
+      "model__C": [
+        0.01,
+        0.1,
+        1.0,
+        10.0
+      ]
+    },
+    "Clasificación · Random RF": {
+      "model__n_estimators": [
+        80,
+        120,
+        180
+      ],
+      "model__max_depth": [
+        8,
+        16,
+        null
+      ],
+      "model__min_samples_leaf": [
+        1,
+        4,
+        8
+      ],
+      "model__max_features": [
+        "sqrt",
+        0.5
+      ],
+      "model__class_weight": [
+        "balanced_subsample",
+        null
+      ]
+    }
+  },
+  "search_candidate_counts": {
+    "Clasificación · Grid logística": 4,
+    "Clasificación · Random RF": 6
+  },
+  "selection": {
+    "classification": "mayor F1 medio CV"
+  },
+  "limitations": [
+    "CV de desarrollo, no CV anidada",
+    "Validación conocida desde EP2",
+    "Búsqueda limitada a 6.000 canciones de entrenamiento"
+  ]
+}

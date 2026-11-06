@@ -1,0 +1,59 @@
+{
+  "fecha_revision": "2026-11-05",
+  "estado": "Revisión retrospectiva de EV2, alternativas evaluadas en validación",
+  "seleccion_historica": {
+    "regression": "SVM regresión (RBF)",
+    "classification": "Regresión logística",
+    "regression_config": "C=40; epsilon=3; gamma=scale",
+    "classification_config": "C=0.1; balanced",
+    "classification_threshold": 0.5,
+    "popular_threshold": 50,
+    "selection_data": "validation",
+    "train_songs": 16000,
+    "validation_songs": 17804,
+    "test_songs": 17804,
+    "random_state": 42,
+    "python": "3.14.7",
+    "sklearn": "1.9.1"
+  },
+  "regresion": {
+    "criterio_historico": "MAE de validación",
+    "mejor_MAE": "SVM regresión (RBF)",
+    "config_mejor_MAE": "C=40; epsilon=3; gamma=scale",
+    "MAE_validacion": 10.865877738777254,
+    "R2_validacion_seleccion": 0.40296058927996714,
+    "mejor_R2": "Random Forest regresión",
+    "config_mejor_R2": "180 trees; depth=None; leaf=2",
+    "R2_validacion_alternativa": 0.43865119772007266,
+    "MAE_validacion_alternativa": 11.095574822915074,
+    "aumento_MAE_alternativa_pct": 2.1139303207700926,
+    "pareto_ids": [
+      "R06",
+      "R08"
+    ],
+    "R2_RMSE_orden_equivalente": true
+  },
+  "clasificacion": {
+    "criterio_historico": "F1 de validación a umbral 0,5",
+    "mejor_F1": "Regresión logística",
+    "config_mejor_F1": "C=0.1; balanced",
+    "F1_validacion": 0.5975232198142415,
+    "ROC_AUC_validacion_seleccion": 0.8364701908402292,
+    "mejor_ROC_AUC_todas_configuraciones": "Random Forest clasificación",
+    "config_mejor_ROC_AUC": "180 trees; depth=None; leaf=1; balanced",
+    "ROC_AUC_validacion_alternativa": 0.8517165207011944,
+    "F1_validacion_alternativa": 0.4438439452795136,
+    "AP_validacion_alternativa": 0.6558410533880829,
+    "alternativa_evaluada_en_test": false,
+    "umbral_optimizado": false,
+    "nota": "Test solo se reutiliza para los representantes originales, el candidato por AUC se examina en validación."
+  },
+  "limitaciones": [
+    "Validación ya utilizada para selección",
+    "Test conocido desde EV2",
+    "16.000 canciones para ajuste supervisado",
+    "Artistas compartidos entre particiones",
+    "Scores sin calibración demostrada",
+    "Utilidad comercial fuera de lo medido"
+  ]
+}

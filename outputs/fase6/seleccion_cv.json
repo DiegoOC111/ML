@@ -1,0 +1,6 @@
+{
+  "classification": "Clasificación · Grid logística",
+  "selection_data": "CV de desarrollo sobre 6.000 canciones de entrenamiento",
+  "classification_threshold": 0.5,
+  "validation_used_for_selection": false
+}
